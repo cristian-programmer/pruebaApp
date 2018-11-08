@@ -1,0 +1,78 @@
+extends layout
+
+block content
+    .container
+        .row
+            .col-6
+                .card
+                    .card-header
+                        | Usuarios 
+                    .card-body
+                       table.table
+                            thead
+                                tr
+                                    th(scope='col') #
+                                    th(scope='col') Usuario
+                                    th(scope='col') Email
+                                    th(scope='col') Tipo
+                            tbody
+                                tr
+                                    th(scope='row') 1
+                                        td Mark
+                                        td Otto
+                                        td @mdo
+                                tr
+                                    th(scope='row') 2
+                                        td Jacob
+                                        td Thornton
+                                        td @fat
+                                tr
+                                    th(scope='row') 3
+                                        td Larry
+                                        td the Bird
+                                        td @twitter
+                
+
+        .row
+            .col-6
+
+                .modal#exampleModal(tabindex='-1', role='dialog')
+                    .modal-dialog(role='document')
+                        .modal-content
+                            .modal-header
+                                h5.modal-title Agregar Nuevo Usuario
+                                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                span(aria-hidden='true') ×
+                            .modal-body
+                                form#idfrom(method ='POST' action='/users/createUser')
+                                    .form-group
+                                        label(for='name') Usuario
+                                        input#name.form-control(type='text', placeholder='Nombre de usuario')
+
+                                    .form-group
+                                        label(for='password') Contraseña
+                                        input#password.form-control(type='password', placeholder='Contraseña')
+
+                                    .form-group
+                                        label(for='email') Correo Electronico
+                                        input#email.form-control(type='email', placeholder='Correo Electronico')
+
+                                    .form-group
+                                        label(for='type') Tipo de Usuario
+                                        select#type.form-control
+
+                                            option(value='1') Administrador
+                                            option(value='2') Soporte
+
+                                    button.btn.btn-secondary(type='button', data-dismiss='modal') Cancelar
+                                    button.btn.btn-primary(type='submit') Guardar
+
+                                        
+                            
+                                 
+
+                button.btn.btn-primary(type='button', data-toggle='modal', data-target='#exampleModal')
+                        | Agregar Usuario
+                script(src="javascripts/configUsers.js")
+
+

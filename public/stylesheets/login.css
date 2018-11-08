@@ -1,0 +1,86 @@
+body, html {
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin-top: 0px !important;
+}
+
+.card-container {
+    width: 450px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    background-color: #DEDEDE;
+    padding: 20px;
+    border-radius: 1px;
+}
+
+img {
+    margin: 25px auto 25px;
+    display: block;
+    height: 60%;
+    width: 60%;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+.form-signin #inputUser, .form-signin #inputPassword {   
+    height: 44px;
+    font-size: 16px;
+}
+
+.form-signin input[type=password], .form-signin input[type=text] {
+    width: 100%;
+    display: block;
+    margin-bottom: 22px;
+    z-index: 1;
+    position: relative;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.form-signin input[type=password]:focus, .form-signin input[type=text]:focus {
+    box-shadow: 0px 0px 5px #4195fc;
+}
+
+.checkbox {
+    margin-top: 19px !important;
+    margin-bottom: 19px !important;
+}
+
+.btn.btn-signin {
+    background-color: #95C078;
+    padding: 0px;
+    font-weight: 700;
+    font-size: 14px;
+    height: 36px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s;
+}
+
+.btn.btn-signin:hover, .btn.btn-signin:active, .btn.btn-signin:focus {
+    background-color: #95C078;
+    cursor: pointer;
+}
+
+@media (max-width: 490px) {
+    .card-container {
+        width: 95%;
+        height: auto;
+    }
+}

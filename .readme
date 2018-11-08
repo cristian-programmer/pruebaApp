@@ -1,0 +1,3 @@
+# para instalar las dependencias de node_modules : npm install
+# para correr el servidor usar: nodemon
+

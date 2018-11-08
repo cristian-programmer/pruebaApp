@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    .card-container
+        img(src='images/bitcoin.svg')
+        form.form-signin#idfrom(action='/login' method='post')
+            input#inputUser.form-control(name="username", type='text', placeholder='Usuario', required='', autofocus='')
+            input#inputPassword.form-control(name="password", type='password', placeholder='Contraseña', required='')
+            #remember.checkbox
+              label
+                input(name='rememberme', type='checkbox', value='remember-me')
+                |  Recuérdame
+            button.btn.btn-lg.btn-primary.btn-block.btn-signin(type='submit') Ingresar
+        br
+        div #{error_message}
+    link(href='stylesheets/login.css', rel='stylesheet')
+    script(src="javascripts/login.js")
